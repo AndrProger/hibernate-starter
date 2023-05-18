@@ -1,17 +1,16 @@
 package com.dmdev.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.lang.annotation.Target;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDate;
-import java.util.Objects;
 
 
 @Data
@@ -25,7 +24,7 @@ public class User {
     private String username;
     private String firstName;
     private String lastName;
-    @Column(name="birth_date")
+    @Column(name = "birth_date")
     private LocalDate birthDate;
     private Integer age;
 }

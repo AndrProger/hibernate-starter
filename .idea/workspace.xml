@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/HibernateRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment=" 5. Entity">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -50,14 +49,18 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Java/hibernate-starter-lesson-6",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Docker",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -66,7 +69,15 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Application.HibernateRunner">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.dmdev" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.HibernateRunnerTest.checkReflectionAPI">
     <configuration name="HibernateRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dmdev.HibernateRunner" />
       <module name="hibernate-starter.main" />
@@ -93,8 +104,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HibernateRunnerTest.checkReflectionAPI" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.dmdev.HibernateRunnerTest.checkReflectionAPI&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HibernateRunnerTest.checkReflectionAPI" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.HibernateRunner" />
       </list>
@@ -109,11 +144,50 @@
       <option name="presentableId" value="Default" />
       <updated>1683373249366</updated>
       <workItem from="1683373250673" duration="920000" />
-      <workItem from="1683426494433" duration="5343000" />
+      <workItem from="1683426494433" duration="5432000" />
+      <workItem from="1683632470846" duration="410000" />
+      <workItem from="1684061557400" duration="479000" />
+      <workItem from="1684125229514" duration="601000" />
+      <workItem from="1684380951288" duration="704000" />
+      <workItem from="1684390153326" duration="6408000" />
     </task>
+    <task id="LOCAL-00001" summary=" 5. Entity">
+      <created>1683436792713</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683436792713</updated>
+    </task>
+    <task id="LOCAL-00002" summary=" 5. Entity">
+      <created>1683436798764</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683436798764</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[SW.BAND] 5. Entity" />
+    <MESSAGE value=" 5. Entity" />
+    <option name="LAST_COMMIT_MESSAGE" value=" 5. Entity" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/hibernate_starter$HibernateRunnerTest_checkReflectionAPI.ic" NAME="HibernateRunnerTest.checkReflectionAPI Coverage Results" MODIFIED="1684403975654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
