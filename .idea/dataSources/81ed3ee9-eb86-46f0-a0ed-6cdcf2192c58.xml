@@ -3,15 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.45">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>742</IntrospectionStateNumber>
+      <IntrospectionStateNumber>769</IntrospectionStateNumber>
       <ServerVersion>15.2</ServerVersion>
       <StartupTime>1684318238</StartupTime>
       <TimeZones>true ACDT
@@ -1405,7 +1397,7 @@ true posixrules
 13186||10|C|G
 13186||-9223372036854775808|U|G
 13186||10|U|G</Grants>
-      <IntrospectionStateNumber>742</IntrospectionStateNumber>
+      <IntrospectionStateNumber>769</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4818,14 +4810,14 @@ true posixrules
     <schema id="261" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>742</IntrospectionStateNumber>
+      <IntrospectionStateNumber>769</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <table id="262" parent="261" name="users">
-      <ObjectId>16388</ObjectId>
-      <StateNumber>737</StateNumber>
+      <ObjectId>24596</ObjectId>
+      <StateNumber>768</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4833,51 +4825,57 @@ true posixrules
       <DasType>varchar(128)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>737</StateNumber>
+      <StateNumber>768</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="264" parent="262" name="firstname">
       <DasType>varchar(128)|0s</DasType>
       <Position>2</Position>
-      <StateNumber>737</StateNumber>
+      <StateNumber>768</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="265" parent="262" name="lastname">
       <DasType>varchar(128)|0s</DasType>
       <Position>3</Position>
-      <StateNumber>737</StateNumber>
+      <StateNumber>768</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="266" parent="262" name="birth_date">
       <DasType>date|0s</DasType>
       <Position>4</Position>
-      <StateNumber>737</StateNumber>
+      <StateNumber>768</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="267" parent="262" name="age">
-      <DasType>integer|0s</DasType>
+    <column id="267" parent="262" name="role">
+      <DasType>varchar(32)|0s</DasType>
       <Position>5</Position>
-      <StateNumber>737</StateNumber>
-      <TypeId>23</TypeId>
+      <StateNumber>768</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
-    <index id="268" parent="262" name="users_pkey">
+    <column id="268" parent="262" name="info">
+      <DasType>jsonb|0s</DasType>
+      <Position>6</Position>
+      <StateNumber>768</StateNumber>
+      <TypeId>3802</TypeId>
+    </column>
+    <index id="269" parent="262" name="users_pkey">
       <ColNames>username</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16391</ObjectId>
+      <ObjectId>24601</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>737</StateNumber>
+      <StateNumber>768</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="269" parent="262" name="users_pkey">
+    <key id="270" parent="262" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16392</ObjectId>
+      <ObjectId>24602</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>737</StateNumber>
-      <UnderlyingIndexId>16391</UnderlyingIndexId>
+      <StateNumber>768</StateNumber>
+      <UnderlyingIndexId>24601</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

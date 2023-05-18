@@ -22,11 +22,6 @@ class HibernateRunnerTest {
     @Test
     void checkReflectionAPI() throws SQLException, IllegalAccessException {
         User user = User.builder()
-                .username("ivan@gmail.com")
-                .firstName("Ivan")
-                .lastName("Ivanov")
-                .birthDate(LocalDate.of(2000, 1,19))
-                .age(20)
                 .build();
         String sql= """
                     insert 
@@ -52,11 +47,21 @@ class HibernateRunnerTest {
 
         System.out.println(sql.formatted(tableName,columnNames, columnValues));
 
-        Connection conn =null;
-        PreparedStatement preparedStatement = conn.prepareStatement(sql.formatted(tableName,columnNames, columnValues));
-        for (Field field : declaredFields){
-            field.setAccessible(true);
-            preparedStatement.setObject(1,field.get(user));
-        }
+//        Connection conn =null;
+//        PreparedStatement preparedStatement = conn.prepareStatement(sql.formatted(tableName,columnNames, columnValues));
+//        for (Field field : declaredFields){
+//            field.setAccessible(true);
+//            preparedStatement.setObject(1,field.get(user));
+//        }
+        // ANSI Escape-последовательности для установки красного цвета
+        String redColor = "\u001B[31m";
+        // ANSI Escape-последовательство для сброса цвета в консоли
+        String resetColor = "\u001B[0m";
+
+        // Текст, который нужно вывести красным
+        String text = "red text!";
+
+        // Вывод текста красным цветом
+        System.out.println(redColor + text + resetColor);
     }
 }
