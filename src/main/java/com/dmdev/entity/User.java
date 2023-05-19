@@ -12,6 +12,7 @@ import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Date;
 
 
 @Data
@@ -21,6 +22,7 @@ import java.time.LocalDate;
 @Entity
 @Table(name="users",schema = "public")
 @TypeDef(name="dmdev",typeClass=JsonBinaryType.class)
+@Access(AccessType.FIELD) //def
 public class User {
 
     @EmbeddedId
@@ -31,8 +33,11 @@ public class User {
     private String username;
     @Type(type="dmdev")
     private String info;
+//    @Transient
     @Enumerated(EnumType.STRING)
     private Role role;
+//    @Temporal(TemporalType.TIMESTAMP)
+//    private Date date;
 }
 
 

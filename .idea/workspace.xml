@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment="2. Primary keys">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment="3. EmbeddedId">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/HibernateRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/PersonalInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/PersonalInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +44,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
@@ -154,7 +149,7 @@
       <workItem from="1684125229514" duration="601000" />
       <workItem from="1684380951288" duration="704000" />
       <workItem from="1684390153326" duration="23775000" />
-      <workItem from="1684481558512" duration="7135000" />
+      <workItem from="1684481558512" duration="8178000" />
     </task>
     <task id="LOCAL-00001" summary=" 5. Entity">
       <created>1683436792713</created>
@@ -212,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684498896274</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="3. EmbeddedId">
+      <created>1684504223570</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684504223570</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +241,8 @@
     <MESSAGE value="2. Logging. Файл log4j.xml" />
     <MESSAGE value="3. Logging. File appender" />
     <MESSAGE value="2. Primary keys" />
-    <option name="LAST_COMMIT_MESSAGE" value="2. Primary keys" />
+    <MESSAGE value="3. EmbeddedId" />
+    <option name="LAST_COMMIT_MESSAGE" value="3. EmbeddedId" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
