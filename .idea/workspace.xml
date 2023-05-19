@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment=" 10. Методы updatedeleteget">
+    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment="14. Entity lifecycle. Практика">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/until/HibernateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/HibernateRunner.java" afterDir="false" />
@@ -25,6 +27,7 @@
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -69,6 +72,9 @@
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Java\hibernate-starter\src\main\resources" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.dmdev" />
@@ -146,7 +152,7 @@
       <workItem from="1684061557400" duration="479000" />
       <workItem from="1684125229514" duration="601000" />
       <workItem from="1684380951288" duration="704000" />
-      <workItem from="1684390153326" duration="16838000" />
+      <workItem from="1684390153326" duration="23077000" />
     </task>
     <task id="LOCAL-00001" summary=" 5. Entity">
       <created>1683436792713</created>
@@ -176,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684415171316</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="12. First Level Cache">
+      <created>1684422309079</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684422309079</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,23 +211,11 @@
     <MESSAGE value=" 5. Entity" />
     <MESSAGE value="6. Класс Session" />
     <MESSAGE value=" 10. Методы updatedeleteget" />
-    <option name="LAST_COMMIT_MESSAGE" value=" 10. Методы updatedeleteget" />
+    <MESSAGE value="12. First Level Cache" />
+    <MESSAGE value="14. Entity lifecycle. Практика" />
+    <option name="LAST_COMMIT_MESSAGE" value="14. Entity lifecycle. Практика" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/HibernateRunner.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/HibernateRunner.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.util.HashMap$Node" memberName="key" />
