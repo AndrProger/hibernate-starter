@@ -7,6 +7,7 @@ import com.dmdev.entity.Role;
 import com.dmdev.entity.User;
 import com.dmdev.until.HibernateUtil;
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
+import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -18,9 +19,10 @@ import org.slf4j.LoggerFactory;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
+@Slf4j
 public class HibernateRunner {
 
-    private static final Logger log= LoggerFactory.getLogger(HibernateRunner.class);
+    //private static final Logger log= LoggerFactory.getLogger(HibernateRunner.class);
     public static void main(String[] args) throws SQLException {
 
 

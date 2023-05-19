@@ -1,6 +1,7 @@
 package com.dmdev;
 
 import com.dmdev.entity.User;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
 import javax.persistence.Column;
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
 
 import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.joining;
+
 
 class HibernateRunnerTest {
 
