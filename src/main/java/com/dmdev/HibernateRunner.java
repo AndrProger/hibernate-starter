@@ -3,6 +3,7 @@ package com.dmdev;
 
 import com.dmdev.convertor.BirthdayConverter;
 import com.dmdev.entity.Birthday;
+import com.dmdev.entity.PersonalInfo;
 import com.dmdev.entity.Role;
 import com.dmdev.entity.User;
 import com.dmdev.until.HibernateUtil;
@@ -29,10 +30,13 @@ public class HibernateRunner {
         try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory())
         {
             User user = User.builder()
-                    .username("Ivan@gmail.com")
-                    .firstName("Ivan")
-                    .lastName("Ivanov")
+                    .username("Petr4@gmail.com")
+                    .personalInfo(PersonalInfo.builder()
+                            .lastName("Petrov")
+                            .firstName("Petr")
+                            .build())
                     .build();
+
             log.info("User entity is in transient state, object: {}", user);
             Session session1=sessionFactory.openSession();
             try(session1) {
