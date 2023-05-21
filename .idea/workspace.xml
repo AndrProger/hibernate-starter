@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment="3. EmbeddedId">
+    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment="4. Other basic annotations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" afterDir="false" />
     </list>
@@ -149,7 +149,7 @@
       <workItem from="1684125229514" duration="601000" />
       <workItem from="1684380951288" duration="704000" />
       <workItem from="1684390153326" duration="23775000" />
-      <workItem from="1684481558512" duration="8178000" />
+      <workItem from="1684481558512" duration="12041000" />
     </task>
     <task id="LOCAL-00001" summary=" 5. Entity">
       <created>1683436792713</created>
@@ -214,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684504223570</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="4. Other basic annotations">
+      <created>1684511195682</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684511195682</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +249,8 @@
     <MESSAGE value="3. Logging. File appender" />
     <MESSAGE value="2. Primary keys" />
     <MESSAGE value="3. EmbeddedId" />
-    <option name="LAST_COMMIT_MESSAGE" value="3. EmbeddedId" />
+    <MESSAGE value="4. Other basic annotations" />
+    <option name="LAST_COMMIT_MESSAGE" value="4. Other basic annotations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

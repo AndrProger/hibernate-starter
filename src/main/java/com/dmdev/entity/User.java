@@ -36,7 +36,7 @@ public class User {
 //    @Transient
     @Enumerated(EnumType.STRING)
     private Role role;
-//    @Temporal(TemporalType.TIMESTAMP)
+//    @Temporal(TemporalType.TIMESTAM`
 //    private Date date;
 }
 
