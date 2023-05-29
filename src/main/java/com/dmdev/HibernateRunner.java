@@ -2,10 +2,7 @@ package com.dmdev;
 
 
 import com.dmdev.convertor.BirthdayConverter;
-import com.dmdev.entity.Birthday;
-import com.dmdev.entity.PersonalInfo;
-import com.dmdev.entity.Role;
-import com.dmdev.entity.User;
+import com.dmdev.entity.*;
 import com.dmdev.until.HibernateUtil;
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import lombok.extern.slf4j.Slf4j;
@@ -27,40 +24,28 @@ public class HibernateRunner {
     public static void main(String[] args) throws SQLException {
 
 
-        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory())
-        {
+        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory()) {
+            Company company = Company.builder()
+                    .name("Google")
+                    .build();
             User user = User.builder()
-                    .username("Petr4@gmail.com")
-                    .personalInfo(PersonalInfo.builder()
-                            .lastName("Petrov")
-                            .firstName("Petr")
-                            .birthDate(new Birthday(LocalDate.of(2000,1,2)))
-                            .build())
+                    .username("Petr44@gmail.com")
+                    .company(company)
                     .build();
 
             log.info("User entity is in transient state, object: {}", user);
-            Session session1=sessionFactory.openSession();
-            try(session1) {
+            Session session1 = sessionFactory.openSession();
+            try (session1) {
                 Transaction transaction = session1.beginTransaction();
-                log.trace("Transaction is created, {}", transaction);
 
-                session1.saveOrUpdate(user);
-                log.trace("User is in persistent state:{} session {}", user,session1);
+                User user1 = session1.get(User.class, 1l);
 
+                //  session1.save(company);
+                //session1.save(user);
+                System.out.println(user1);
                 session1.getTransaction().commit();
             }
-            log.warn("User is in detached state:{} session is closed {}", user,session1);
-            try(Session session=sessionFactory.openSession()){
-                PersonalInfo key = PersonalInfo.builder()
-                        .lastName("Petrov")
-                        .firstName("Petr")
-                        .birthDate(new Birthday(LocalDate.of(2000, 1, 2)))
-                        .build();
-                User user2 = session.get(User.class, key);
-                System.out.println();
-            }
-        } catch (Exception e){
-            log.error("Exception occurred", e);
+
         }
 
 
