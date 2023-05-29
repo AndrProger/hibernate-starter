@@ -25,6 +25,23 @@ import static java.util.stream.Collectors.joining;
 
 class HibernateRunnerTest {
     @Test
+    void checkLazyInitialisatuon(){
+        Company company =null;
+        try(SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+        Session session = sessionFactory.openSession()){
+            session.beginTransaction();
+
+            company = session.get(Company.class, 2L);
+
+            session.getTransaction().commit();
+
+        }
+        var users =company.getUsers();
+        System.out.println(users.size());
+
+
+    }
+    @Test
     void deleteCompany(){
         @Cleanup SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
         @Cleanup Session session = sessionFactory.openSession();
@@ -64,8 +81,8 @@ class HibernateRunnerTest {
         session.beginTransaction();
 
 
-        Company company = session.get(Company.class, 1);
-        System.out.println();
+        Company company = session.get(Company.class, 2);
+    System.out.println();
         session.getTransaction().commit();
     }
 
