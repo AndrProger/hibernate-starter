@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment="~~~~~">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Company.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/CompanyProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/ProxyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment=" 4. Cascade types">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/HibernateRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/until/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/until/HibernateUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +153,7 @@
       <workItem from="1684481558512" duration="12733000" />
       <workItem from="1684680196598" duration="2261000" />
       <workItem from="1684732633886" duration="8171000" />
-      <workItem from="1685280310257" duration="3346000" />
+      <workItem from="1685280310257" duration="7606000" />
     </task>
     <task id="LOCAL-00001" summary=" 5. Entity">
       <created>1683436792713</created>
@@ -238,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684680102880</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="3. Hibernate Proxy">
+      <created>1685333018869</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1685333018869</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,12 +269,24 @@
     <MESSAGE value="3. EmbeddedId" />
     <MESSAGE value="4. Other basic annotations" />
     <MESSAGE value="~~~~~" />
-    <option name="LAST_COMMIT_MESSAGE" value="~~~~~" />
+    <MESSAGE value="3. Hibernate Proxy" />
+    <MESSAGE value=" 4. Cascade types" />
+    <option name="LAST_COMMIT_MESSAGE" value=" 4. Cascade types" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/HibernateRunner.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.util.HashMap$Node" memberName="key" />
+        <PinnedItemInfo parentTag="com.dmdev.entity.User" memberName="id" />
         <PinnedItemInfo parentTag="org.hibernate.metamodel.internal.MetamodelImpl" memberName="typeConfiguration" />
       </pinned-members>
     </pin-to-top-manager>

@@ -26,10 +26,10 @@ public class HibernateRunner {
 
         try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory()) {
             Company company = Company.builder()
-                    .name("Google")
+                    .name("Amazon")
                     .build();
             User user = User.builder()
-                    .username("Petr44@gmail.com")
+                    .username("Ivan@gmail.com")
                     .company(company)
                     .build();
 
@@ -38,11 +38,10 @@ public class HibernateRunner {
             try (session1) {
                 Transaction transaction = session1.beginTransaction();
 
-                User user1 = session1.get(User.class, 1l);
 
-                //  session1.save(company);
-                //session1.save(user);
-                System.out.println(user1);
+                session1.save(user);
+
+
                 session1.getTransaction().commit();
             }
 
