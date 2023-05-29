@@ -24,24 +24,56 @@ import static java.util.stream.Collectors.joining;
 
 
 class HibernateRunnerTest {
+    @Test
+    void deleteCompany(){
+        @Cleanup SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+        @Cleanup Session session = sessionFactory.openSession();
+
+        session.beginTransaction();
+
+        User company = session.get(User.class, 3L);
+        session.delete(company);
+        session.getTransaction().commit();
+    }
 
     @Test
-    void oneToMany(){
-        @Cleanup  SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+    void addUserToNewCompany() {
+        @Cleanup SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+        @Cleanup Session session = sessionFactory.openSession();
+
+        session.beginTransaction();
+
+        Company company = Company.builder()
+                .name("Facebook")
+                .build();
+
+        User user = User.builder()
+                .username("sveta@gmail.com")
+                .build();
+        company.addUser(user);
+
+        session.save(company);
+        session.getTransaction().commit();
+    }
+
+    @Test
+    void oneToMany() {
+        @Cleanup SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
         @Cleanup Session session = sessionFactory.openSession();
 
         session.beginTransaction();
 
 
         Company company = session.get(Company.class, 1);
-        System.out.println( );
+        System.out.println();
         session.getTransaction().commit();
     }
+
     @Test
     void checkReflectionAPI() throws SQLException, IllegalAccessException {
         User user = User.builder()
                 .build();
-        String sql= """
+        String sql = """
                     insert 
                     into 
                     %s
@@ -55,15 +87,15 @@ class HibernateRunnerTest {
 
 
         Field[] declaredFields = user.getClass().getDeclaredFields();
-        String columnNames =Arrays.stream(declaredFields)
-                .map(field-> Optional.ofNullable(field.getAnnotation(Column.class))
-                    .map(Column::name)
-                    .orElse(field.getName()))
+        String columnNames = Arrays.stream(declaredFields)
+                .map(field -> Optional.ofNullable(field.getAnnotation(Column.class))
+                        .map(Column::name)
+                        .orElse(field.getName()))
                 .collect(Collectors.joining(", "));
 
         String columnValues = Arrays.stream(declaredFields).map(field -> "?").collect(joining(", "));
 
-        System.out.println(sql.formatted(tableName,columnNames, columnValues));
+        System.out.println(sql.formatted(tableName, columnNames, columnValues));
 
 //        Connection conn =null;
 //        PreparedStatement preparedStatement = conn.prepareStatement(sql.formatted(tableName,columnNames, columnValues));

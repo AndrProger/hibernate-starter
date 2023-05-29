@@ -36,7 +36,7 @@ public class User {
     private String info;
     @Enumerated(EnumType.STRING)
     private Role role;
-    @ManyToOne( fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    @ManyToOne( fetch = FetchType.EAGER)
     @JoinColumn(name="company_id")
     private Company company;
 }
