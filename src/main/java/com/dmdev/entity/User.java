@@ -3,10 +3,7 @@ package com.dmdev.entity;
 
 import com.dmdev.convertor.BirthdayConverter;
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
@@ -20,8 +17,9 @@ import java.util.Date;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name="users",schema = "public")
-@TypeDef(name="dmdev",typeClass=JsonBinaryType.class)
+@ToString(exclude = {"company", "profile"})
+@Table(name = "users", schema = "public")
+@TypeDef(name = "dmdev", typeClass = JsonBinaryType.class)
 @Access(AccessType.FIELD) //def
 public class User {
     @Id
@@ -32,13 +30,15 @@ public class User {
 
     @Column(unique = true)
     private String username;
-    @Type(type="dmdev")
+    @Type(type = "dmdev")
     private String info;
     @Enumerated(EnumType.STRING)
     private Role role;
-    @ManyToOne( fetch = FetchType.EAGER)
-    @JoinColumn(name="company_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "company_id")
     private Company company;
+    @OneToOne(mappedBy = "user",cascade = CascadeType.ALL)
+    private Profile profile;
 }
 
 

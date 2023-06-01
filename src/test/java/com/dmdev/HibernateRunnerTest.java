@@ -1,6 +1,7 @@
 package com.dmdev;
 
 import com.dmdev.entity.Company;
+import com.dmdev.entity.Profile;
 import com.dmdev.entity.User;
 import com.dmdev.until.HibernateUtil;
 import lombok.Cleanup;
@@ -25,6 +26,43 @@ import static java.util.stream.Collectors.joining;
 
 class HibernateRunnerTest {
     @Test
+     void checkOneToOne() {
+        try(SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+            Session session = sessionFactory.openSession()){
+            session.beginTransaction();
+            var user =session.get(User.class,7L);
+            System.out.println();
+
+//            var user = User.builder()
+//                    .username("test@g.d")
+//                    .build();
+//            var profile = Profile.builder()
+//                    .language("ru")
+//                    .street("kols 2")
+//                    .build();
+//
+//            session.save(user);
+//            profile.setUser(user);
+
+
+            session.getTransaction().commit();
+
+
+        }
+    }
+    @Test
+    void checkOrhanRemoval(){
+        try(SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+            Session session = sessionFactory.openSession()){
+            session.beginTransaction();
+
+            var company = session.get(Company.class, 2L);
+            company.getUsers().removeIf(user -> user.getId().equals(6L));
+            session.getTransaction().commit();
+
+        }
+    }
+    @Test
     void checkLazyInitialisatuon(){
         Company company =null;
         try(SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
@@ -36,7 +74,7 @@ class HibernateRunnerTest {
             session.getTransaction().commit();
 
         }
-        var users =company.getUsers();
+        var  users =company.getUsers();
         System.out.println(users.size());
 
 
