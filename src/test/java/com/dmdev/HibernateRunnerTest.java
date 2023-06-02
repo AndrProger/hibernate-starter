@@ -30,17 +30,18 @@ class HibernateRunnerTest {
         try(SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
             Session session = sessionFactory.openSession()){
             session.beginTransaction();
-            var user =session.get(User.class,7L);
-            System.out.println();
 
+            User user = session.get(User.class,8L);
+            System.out.println();
+//
 //            var user = User.builder()
-//                    .username("test@g.d")
+//                    .username("test3@g.d")
 //                    .build();
 //            var profile = Profile.builder()
 //                    .language("ru")
 //                    .street("kols 2")
 //                    .build();
-//
+//            profile.setUser(user);
 //            session.save(user);
 //            profile.setUser(user);
 

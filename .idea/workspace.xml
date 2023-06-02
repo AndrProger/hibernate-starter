@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment=" 11. OneToOne. Primary key">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Profile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Profile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/until/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/until/HibernateUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java" afterDir="false" />
@@ -247,7 +246,7 @@
       <workItem from="1684680196598" duration="2261000" />
       <workItem from="1684732633886" duration="8171000" />
       <workItem from="1685280310257" duration="16236000" />
-      <workItem from="1685452915946" duration="5039000" />
+      <workItem from="1685452915946" duration="6587000" />
     </task>
     <task id="LOCAL-00001" summary=" 5. Entity">
       <created>1683436792713</created>
@@ -368,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685633252198</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary=" 11. OneToOne. Primary key">
+      <created>1685697891870</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1685697891870</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,18 +422,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
-          <line>122</line>
+          <line>123</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
-          <line>71</line>
+          <line>72</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="11" />
+          <line>34</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
