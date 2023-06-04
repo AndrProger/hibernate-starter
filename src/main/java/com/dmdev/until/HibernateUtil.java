@@ -1,9 +1,7 @@
 package com.dmdev.until;
 
 import com.dmdev.convertor.BirthdayConverter;
-import com.dmdev.entity.Company;
-import com.dmdev.entity.Profile;
-import com.dmdev.entity.User;
+import com.dmdev.entity.*;
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import lombok.experimental.UtilityClass;
 import org.hibernate.Session;
@@ -19,6 +17,8 @@ public class HibernateUtil {
         configuration.addAnnotatedClass(User.class);
         configuration.addAnnotatedClass(Company.class );
         configuration.addAnnotatedClass(Profile.class );
+        configuration.addAnnotatedClass(Chat.class );
+        configuration.addAnnotatedClass(UserChat.class );
         configuration.addAttributeConverter(new BirthdayConverter());
         configuration.registerTypeOverride(new JsonBinaryType());
         configuration.configure();

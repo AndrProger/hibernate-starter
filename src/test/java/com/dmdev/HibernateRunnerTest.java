@@ -1,8 +1,6 @@
 package com.dmdev;
 
-import com.dmdev.entity.Company;
-import com.dmdev.entity.Profile;
-import com.dmdev.entity.User;
+import com.dmdev.entity.*;
 import com.dmdev.until.HibernateUtil;
 import lombok.Cleanup;
 
@@ -16,6 +14,7 @@ import java.lang.reflect.Field;
 
 import java.sql.SQLException;
 
+import java.time.Instant;
 import java.util.Arrays;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -25,6 +24,38 @@ import static java.util.stream.Collectors.joining;
 
 
 class HibernateRunnerTest {
+
+    @Test
+    void checkManyToMany(){
+        try(SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+            Session session = sessionFactory.openSession()){
+            session.beginTransaction();
+
+            User user = session.get(User.class,8L);
+            var chat=session.get(Chat.class, 4L);
+            UserChat userChat =UserChat.builder()
+                    .createdAt(Instant.now())
+                    .createdBy(user.getUsername())
+                    .build();
+
+            userChat.setUser(user);
+            userChat.setChat(chat);
+
+            session.save(userChat);
+   //         user.getChats().clear();
+//            Chat chat = Chat.builder(
+//                    .name("hg")
+//                    .build();
+//
+//            user.addChat(chat);
+//            session.save(chat);
+
+
+            session.getTransaction().commit();
+
+
+        }
+    }
     @Test
      void checkOneToOne() {
         try(SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();

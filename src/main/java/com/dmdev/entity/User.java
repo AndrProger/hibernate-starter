@@ -10,6 +10,8 @@ import org.hibernate.annotations.TypeDef;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Data
@@ -17,7 +19,8 @@ import java.util.Date;
 @AllArgsConstructor
 @Builder
 @Entity
-@ToString(exclude = {"company", "profile"})
+@ToString(exclude = {"company", "profile","userChats"})
+@EqualsAndHashCode(of={"username","info","role"})
 @Table(name = "users", schema = "public")
 @TypeDef(name = "dmdev", typeClass = JsonBinaryType.class)
 @Access(AccessType.FIELD) //def
@@ -44,6 +47,14 @@ public class User {
             optional = false
     )
     private Profile profile;
+
+    @Builder.Default
+    @OneToMany(mappedBy = "user")
+    private Set<UserChat>userChats =new HashSet<>();
+
+
+
+
 }
 
 
