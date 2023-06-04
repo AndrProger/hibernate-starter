@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -24,7 +25,8 @@ public class Company {
     private String name;
     @Builder.Default
     @OneToMany(mappedBy = "company" ,cascade =  CascadeType.ALL,fetch = FetchType.LAZY, orphanRemoval = true)
-    private Set<User> users=new HashSet<>();
+    @OrderBy("username Desc, personalInfo.lastName ASC ")
+    private List<User> users=new ArrayList<>();
 @ElementCollection
 @CollectionTable(name="company_locale")
     private List<LocaleInfo> locales;

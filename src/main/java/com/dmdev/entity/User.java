@@ -26,9 +26,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     //@AttributeOverride(name="birthDate", column = @Column(name="birth_date"))
-    //private PersonalInfo personalInfo;
     private Long id;
-
+    private PersonalInfo personalInfo;
     @Column(unique = true)
     private String username;
     @Type(type = "dmdev")
