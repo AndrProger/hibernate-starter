@@ -5,11 +5,13 @@ import lombok.*;
 import javax.persistence.*;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Data
-@ToString(exclude = "users")
 @EqualsAndHashCode(exclude = "users")
+@ToString(exclude = "users")
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -23,6 +25,9 @@ public class Company {
     @Builder.Default
     @OneToMany(mappedBy = "company" ,cascade =  CascadeType.ALL,fetch = FetchType.LAZY, orphanRemoval = true)
     private Set<User> users=new HashSet<>();
+@ElementCollection
+@CollectionTable(name="company_locale")
+    private List<LocaleInfo> locales;
     public void addUser(User user){
         users.add(user);
         user.setCompany(this);

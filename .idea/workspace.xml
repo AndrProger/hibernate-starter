@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment=" 12. OneToOne. Foreign key">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Chat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/UserChat.java" afterDir="false" />
+    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment="14. ManyToMany. Separate entity">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/LocaleInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Chat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Company.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/until/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/until/HibernateUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +103,7 @@
       <recent name="com.dmdev" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.HibernateRunnerTest.checkManyToMany">
+  <component name="RunManager" selected="Gradle.HibernateRunnerTest.localeInfo">
     <configuration name="HibernateRunnerTest.checkLazyInitialisatuon" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -199,7 +196,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="HibernateRunnerTest.oneToMany" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="HibernateRunnerTest.localeInfo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -212,7 +209,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.dmdev.HibernateRunnerTest.oneToMany&quot;" />
+            <option value="&quot;com.dmdev.HibernateRunnerTest.localeInfo&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -224,11 +221,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HibernateRunnerTest.localeInfo" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkManyToMany" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkOneToOne" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkOrhanRemoval" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkLazyInitialisatuon" />
-        <item itemvalue="Gradle.HibernateRunnerTest.oneToMany" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +248,7 @@
       <workItem from="1684680196598" duration="2261000" />
       <workItem from="1684732633886" duration="8171000" />
       <workItem from="1685280310257" duration="16236000" />
-      <workItem from="1685452915946" duration="12570000" />
+      <workItem from="1685452915946" duration="15829000" />
     </task>
     <task id="LOCAL-00001" summary=" 5. Entity">
       <created>1683436792713</created>
@@ -386,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685699393712</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="14. ManyToMany. Separate entity">
+      <created>1685867031377</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1685867031377</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +427,8 @@
     <MESSAGE value="[SW.BAND] 9. LazyInitializationException" />
     <MESSAGE value=" 11. OneToOne. Primary key" />
     <MESSAGE value=" 12. OneToOne. Foreign key" />
-    <option name="LAST_COMMIT_MESSAGE" value=" 12. OneToOne. Foreign key" />
+    <MESSAGE value="14. ManyToMany. Separate entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="14. ManyToMany. Separate entity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -435,17 +440,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
-          <line>154</line>
+          <line>168</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
-          <line>103</line>
+          <line>117</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
-          <line>50</line>
+          <line>64</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>

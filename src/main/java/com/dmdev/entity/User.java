@@ -9,9 +9,7 @@ import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 
 @Data
@@ -50,7 +48,7 @@ public class User {
 
     @Builder.Default
     @OneToMany(mappedBy = "user")
-    private Set<UserChat>userChats =new HashSet<>();
+    private List<UserChat> userChats =new ArrayList<>();
 
 
 
