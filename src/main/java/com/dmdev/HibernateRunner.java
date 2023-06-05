@@ -20,6 +20,8 @@ import java.time.LocalDate;
 @Slf4j
 public class HibernateRunner {
 
+
+
     //private static final Logger log= LoggerFactory.getLogger(HibernateRunner.class);
     public static void main(String[] args) throws SQLException {
 

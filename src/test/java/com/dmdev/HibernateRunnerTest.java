@@ -24,6 +24,22 @@ import static java.util.stream.Collectors.joining;
 
 
 class HibernateRunnerTest {
+    @Test
+    void checkH2(){
+        try(SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+            Session session = sessionFactory.openSession()){
+            session.beginTransaction();
+
+            Company company= Company.builder()
+                    .name("Google")
+                    .build();
+
+            session.save(company);
+            session.getTransaction().commit();
+
+
+        }
+    }
 
     @Test
     void localeInfo(){
@@ -34,7 +50,7 @@ class HibernateRunnerTest {
             var company =session.get(Company.class,2L);
 //            company.getLocales().add(LocaleInfo.of("ru","Описание на русском"));
 //            company.getLocales().add(LocaleInfo.of("en","English decreption"));
-            company.getUsers().forEach(System.out::println);
+            company.getUsers().forEach((k,v)-> System.out.println(v));
             session.getTransaction().commit();
 
 
@@ -104,7 +120,7 @@ class HibernateRunnerTest {
             session.beginTransaction();
 
             var company = session.get(Company.class, 2L);
-            company.getUsers().removeIf(user -> user.getId().equals(6L));
+          //  company.getUsers().removeIf(user -> user.getId().equals(6L));
             session.getTransaction().commit();
 
         }

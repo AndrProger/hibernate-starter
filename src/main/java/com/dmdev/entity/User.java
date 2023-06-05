@@ -30,8 +30,8 @@ public class User {
     private PersonalInfo personalInfo;
     @Column(unique = true)
     private String username;
-    @Type(type = "dmdev")
-    private String info;
+//    @Type(type = "dmdev")
+//    private String info;
     @Enumerated(EnumType.STRING)
     private Role role;
     @ManyToOne(fetch = FetchType.LAZY)

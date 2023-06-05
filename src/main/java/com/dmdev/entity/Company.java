@@ -4,10 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Data
 @EqualsAndHashCode(exclude = "users")
@@ -25,13 +22,13 @@ public class Company {
     private String name;
     @Builder.Default
     @OneToMany(mappedBy = "company" ,cascade =  CascadeType.ALL,fetch = FetchType.LAZY, orphanRemoval = true)
-    @OrderBy("username Desc, personalInfo.lastName ASC ")
-    private List<User> users=new ArrayList<>();
+    @MapKey(name="username")
+    private Map<String,User> users=new HashMap();
 @ElementCollection
 @CollectionTable(name="company_locale")
     private List<LocaleInfo> locales;
     public void addUser(User user){
-        users.add(user);
+        users.put(user.getUsername(),user);
         user.setCompany(this);
     }
 }
