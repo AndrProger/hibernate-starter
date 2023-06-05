@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment="16. ElementCollection">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81ed3ee9-eb86-46f0-a0ed-6cdcf2192c58/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment="17. Collection ordering">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Birthday.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Birthday.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/HibernateRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/PersonalInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/PersonalInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +72,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Java/hibernate-starter-lesson-6",
+    "last_opened_file_path": "C:/Java/hibernate-starter/src/test/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,6 +91,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Java\hibernate-starter\src\test\resources" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -103,8 +104,8 @@
       <recent name="com.dmdev" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.HibernateRunnerTest.localeInfo">
-    <configuration name="HibernateRunnerTest.checkLazyInitialisatuon" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.HibernateRunnerTest.checkH2">
+    <configuration name="HibernateRunnerTest.checkH2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -117,7 +118,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.dmdev.HibernateRunnerTest.checkLazyInitialisatuon&quot;" />
+            <option value="&quot;com.dmdev.HibernateRunnerTest.checkH2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -221,11 +222,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HibernateRunnerTest.checkH2" />
         <item itemvalue="Gradle.HibernateRunnerTest.localeInfo" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkManyToMany" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkOneToOne" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkOrhanRemoval" />
-        <item itemvalue="Gradle.HibernateRunnerTest.checkLazyInitialisatuon" />
       </list>
     </recent_temporary>
   </component>
@@ -248,7 +249,7 @@
       <workItem from="1684680196598" duration="2261000" />
       <workItem from="1684732633886" duration="8171000" />
       <workItem from="1685280310257" duration="16236000" />
-      <workItem from="1685452915946" duration="16934000" />
+      <workItem from="1685452915946" duration="19467000" />
     </task>
     <task id="LOCAL-00001" summary=" 5. Entity">
       <created>1683436792713</created>
@@ -397,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685890959445</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="17. Collection ordering">
+      <created>1685892487586</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1685892487586</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,34 +444,35 @@
     <MESSAGE value=" 12. OneToOne. Foreign key" />
     <MESSAGE value="14. ManyToMany. Separate entity" />
     <MESSAGE value="16. ElementCollection" />
-    <option name="LAST_COMMIT_MESSAGE" value="16. ElementCollection" />
+    <MESSAGE value="17. Collection ordering" />
+    <option name="LAST_COMMIT_MESSAGE" value="17. Collection ordering" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/HibernateRunner.java</url>
-          <line>41</line>
+          <line>43</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
-          <line>169</line>
+          <line>173</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
-          <line>118</line>
+          <line>122</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
-          <line>65</line>
+          <line>69</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
-          <line>36</line>
+          <line>40</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
