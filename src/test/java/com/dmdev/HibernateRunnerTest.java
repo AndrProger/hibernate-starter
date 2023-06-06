@@ -2,6 +2,7 @@ package com.dmdev;
 
 import com.dmdev.entity.*;
 import com.dmdev.until.HibernateUtil;
+import com.dmdev.util.HibernateTestUtil;
 import lombok.Cleanup;
 
 import org.hibernate.Session;
@@ -26,7 +27,7 @@ import static java.util.stream.Collectors.joining;
 class HibernateRunnerTest {
     @Test
     void checkH2(){
-        try(SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+        try(SessionFactory sessionFactory = HibernateTestUtil.buildSessionFactory();
             Session session = sessionFactory.openSession()){
             session.beginTransaction();
 
