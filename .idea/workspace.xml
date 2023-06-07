@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment=" 1. In-Memory databases. H2">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/util/HibernateTestUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/AuditableEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/BaseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/until/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/until/HibernateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/UserChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/UserChat.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,6 +249,8 @@
       <workItem from="1685280310257" duration="16236000" />
       <workItem from="1685452915946" duration="22012000" />
       <workItem from="1686056543805" duration="1835000" />
+      <workItem from="1686065829581" duration="773000" />
+      <workItem from="1686105858631" duration="681000" />
     </task>
     <task id="LOCAL-00001" summary=" 5. Entity">
       <created>1683436792713</created>
