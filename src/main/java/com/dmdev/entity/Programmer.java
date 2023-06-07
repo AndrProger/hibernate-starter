@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@DiscriminatorValue("programmer")
+@PrimaryKeyJoinColumn()
 public class Programmer extends  User {
 
     @Enumerated(EnumType.STRING)

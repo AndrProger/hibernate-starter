@@ -21,8 +21,8 @@ import java.util.*;
 @Table(name = "users", schema = "public")
 @TypeDef(name = "dmdev", typeClass = JsonBinaryType.class)
 @Access(AccessType.FIELD) //def
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn()
+@Inheritance(strategy = InheritanceType.JOINED)
+
 public abstract class User implements BaseEntity<Long> {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
