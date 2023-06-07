@@ -30,18 +30,18 @@ public class HibernateRunner {
             Company company = Company.builder()
                     .name("Amazon")
                     .build();
-            User user = User.builder()
-                    .username("Ivan@gmail.com")
-                    .company(company)
-                    .build();
+//            User user = User.builder()
+//                    .username("Ivan@gmail.com")
+//                    .company(company)
+//                    .build();
 
-            log.info("User entity is in transient state, object: {}", user);
+//            log.info("User entity is in transient state, object: {}", user);
             Session session1 = sessionFactory.openSession();
             try (session1) {
                 Transaction transaction = session1.beginTransaction();
 
 
-                session1.save(user);
+//                session1.save(user);
 
 
                 session1.getTransaction().commit();

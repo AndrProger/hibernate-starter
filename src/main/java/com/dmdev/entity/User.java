@@ -15,16 +15,17 @@ import java.util.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
 @ToString(exclude = {"company", "profile","userChats"})
 @EqualsAndHashCode(of={"username","info","role"})
 @Table(name = "users", schema = "public")
 @TypeDef(name = "dmdev", typeClass = JsonBinaryType.class)
 @Access(AccessType.FIELD) //def
-public class User {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn()
+public abstract class User implements BaseEntity<Long> {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     //@AttributeOverride(name="birthDate", column = @Column(name="birth_date"))
     private Long id;
     private PersonalInfo personalInfo;
@@ -40,12 +41,10 @@ public class User {
     @OneToOne(
             mappedBy = "user",
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY,
-            optional = false
+            fetch = FetchType.LAZY
     )
     private Profile profile;
 
-    @Builder.Default
     @OneToMany(mappedBy = "user")
     private List<UserChat> userChats =new ArrayList<>();
 

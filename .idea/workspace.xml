@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment=" 1. In-Memory databases. H2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/AuditableEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/BaseEntity.java" afterDir="false" />
+    <list default="true" id="f9d69f64-cfab-4602-85fb-8e73c1e92ad5" name="Changes" comment="1. MappedSuperclass">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Language.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/Programmer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/UserChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/UserChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/HibernateRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +49,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Enum" />
         <option value="Kotlin Class" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -89,6 +94,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.dmdev.entity" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Java\hibernate-starter\src\test\resources" />
     </key>
@@ -250,7 +258,8 @@
       <workItem from="1685452915946" duration="22012000" />
       <workItem from="1686056543805" duration="1835000" />
       <workItem from="1686065829581" duration="773000" />
-      <workItem from="1686105858631" duration="681000" />
+      <workItem from="1686105858631" duration="2305000" />
+      <workItem from="1686109215233" duration="2307000" />
     </task>
     <task id="LOCAL-00001" summary=" 5. Entity">
       <created>1683436792713</created>
@@ -420,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685980350997</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="1. MappedSuperclass">
+      <created>1686106573882</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1686106573882</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +477,8 @@
     <MESSAGE value="16. ElementCollection" />
     <MESSAGE value="17. Collection ordering" />
     <MESSAGE value=" 1. In-Memory databases. H2" />
-    <option name="LAST_COMMIT_MESSAGE" value=" 1. In-Memory databases. H2" />
+    <MESSAGE value="1. MappedSuperclass" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. MappedSuperclass" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -473,23 +490,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
-          <line>186</line>
+          <line>206</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
-          <line>135</line>
+          <line>155</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
-          <line>82</line>
+          <line>102</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
-          <line>53</line>
+          <line>73</line>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/HibernateRunnerTest.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

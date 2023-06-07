@@ -31,11 +31,31 @@ class HibernateRunnerTest {
             Session session = sessionFactory.openSession()){
             session.beginTransaction();
 
-            Company company= Company.builder()
+            Company google= Company.builder()
                     .name("Google")
                     .build();
 
-            session.save(company);
+            session.save(google);
+            Programmer programmer= Programmer.builder()
+                    .username("ivan@gmail.com")
+                    .language(Language.JAVA)
+                    .company(google)
+                    .build();
+            session.save(programmer);
+
+            Manager manager=Manager.builder()
+                    .username("sveta@gmal.com")
+                    .projectName("Starter")
+                    .company(google)
+                    .build();
+            session.save(manager);
+            session.flush();
+
+            session.clear();
+
+            Programmer programmer1 = session.get(Programmer.class, 1L);
+            Manager manager1 = session.get(Manager.class, 1L);
+            System.out.println();
             session.getTransaction().commit();
 
 
@@ -166,10 +186,10 @@ class HibernateRunnerTest {
                 .name("Facebook")
                 .build();
 
-        User user = User.builder()
-                .username("sveta@gmail.com")
-                .build();
-        company.addUser(user);
+//        User user = User.builder()
+//                .username("sveta@gmail.com")
+//                .build();
+//        company.addUser(user);
 
         session.save(company);
         session.getTransaction().commit();
@@ -190,8 +210,8 @@ class HibernateRunnerTest {
 
     @Test
     void checkReflectionAPI() throws SQLException, IllegalAccessException {
-        User user = User.builder()
-                .build();
+//        User user = User.builder()
+//                .build();
         String sql = """
                     insert 
                     into 
@@ -200,21 +220,21 @@ class HibernateRunnerTest {
                     values
                     (%s)
                 """;
-        String tableName = ofNullable(user.getClass().getAnnotation(Table.class))
-                .map(tableAnnotation -> tableAnnotation.schema() + "." + tableAnnotation.name())
-                .orElse(user.getClass().getName());
+//        String tableName = ofNullable(user.getClass().getAnnotation(Table.class))
+//                .map(tableAnnotation -> tableAnnotation.schema() + "." + tableAnnotation.name())
+//                .orElse(user.getClass().getName());
 
 
-        Field[] declaredFields = user.getClass().getDeclaredFields();
-        String columnNames = Arrays.stream(declaredFields)
-                .map(field -> Optional.ofNullable(field.getAnnotation(Column.class))
-                        .map(Column::name)
-                        .orElse(field.getName()))
-                .collect(Collectors.joining(", "));
+//        Field[] declaredFields = user.getClass().getDeclaredFields();
+//        String columnNames = Arrays.stream(declaredFields)
+//                .map(field -> Optional.ofNullable(field.getAnnotation(Column.class))
+//                        .map(Column::name)
+//                        .orElse(field.getName()))
+//                .collect(Collectors.joining(", "));
 
-        String columnValues = Arrays.stream(declaredFields).map(field -> "?").collect(joining(", "));
-
-        System.out.println(sql.formatted(tableName, columnNames, columnValues));
+//        String columnValues = Arrays.stream(declaredFields).map(field -> "?").collect(joining(", "));
+//
+//        System.out.println(sql.formatted(tableName, columnNames, columnValues));
 
 //        Connection conn =null;
 //        PreparedStatement preparedStatement = conn.prepareStatement(sql.formatted(tableName,columnNames, columnValues));
