@@ -1,43 +1,71 @@
 package com.dmdev.entity;
 
-
-import com.dmdev.convertor.BirthdayConverter;
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
-import javax.persistence.*;
-import java.time.LocalDate;
-import java.util.*;
+import javax.persistence.AttributeOverride;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
 
 
+
+@NamedQuery(name = "findUserByName", query = "select u from User u " +
+        "left join u.company c " +
+        "where u.personalInfo.firstname = :firstname and c.name = :companyName " +
+        "order by u.personalInfo.lastname desc")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(of = "username")
+@ToString(exclude = {"company", "profile", "userChats", "payments"})
+@Builder
 @Entity
-@ToString(exclude = {"company", "profile","userChats"})
-@EqualsAndHashCode(of={"username","info","role"})
 @Table(name = "users", schema = "public")
 @TypeDef(name = "dmdev", typeClass = JsonBinaryType.class)
-@Access(AccessType.FIELD) //def
-@Inheritance(strategy = InheritanceType.JOINED)
+public class User implements Comparable<User>, BaseEntity<Long> {
 
-public abstract class User implements BaseEntity<Long> {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    //@AttributeOverride(name="birthDate", column = @Column(name="birth_date"))
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @AttributeOverride(name = "birthDate", column = @Column(name = "birth_date"))
     private PersonalInfo personalInfo;
+
     @Column(unique = true)
     private String username;
+
     @Type(type = "dmdev")
     private String info;
+
     @Enumerated(EnumType.STRING)
     private Role role;
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "company_id")
+    @JoinColumn(name = "company_id") // company_id
     private Company company;
+
     @OneToOne(
             mappedBy = "user",
             cascade = CascadeType.ALL,
@@ -45,12 +73,31 @@ public abstract class User implements BaseEntity<Long> {
     )
     private Profile profile;
 
+    @Builder.Default
     @OneToMany(mappedBy = "user")
-    private List<UserChat> userChats =new ArrayList<>();
+    private List<UserChat> userChats = new ArrayList<>();
 
+    @Builder.Default
+    @OneToMany(mappedBy = "receiver")
+    private List<Payment> payments = new ArrayList<>();
 
+    @Override
+    public int compareTo(User o) {
+        return username.compareTo(o.username);
+    }
 
-
+    public String fullName() {
+        return getPersonalInfo().getFirstname() + " " + getPersonalInfo().getLastname();
+    }
 }
+
+
+
+
+
+
+
+
+
 
 

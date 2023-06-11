@@ -26,6 +26,27 @@ import static java.util.stream.Collectors.joining;
 
 class HibernateRunnerTest {
     @Test
+    void checkHQL(){
+        try(SessionFactory sessionFactory = HibernateTestUtil.buildSessionFactory();
+            Session session = sessionFactory.openSession()){
+            session.beginTransaction();
+
+            String name ="Ivan";
+//            var result= session.createQuery("select u from User u where u.personalInfo.firstName =?1", User.class)
+//                    .setParameter(1, name)
+//                    .list();
+            var result= session.createQuery("select u from User u " +
+                            "join  u.company c " +
+                            "where u.personalInfo.firstname = :firstname", User.class)
+                    .setParameter("firstname", name)
+                    .list();
+
+            session.getTransaction().commit();
+
+
+        }
+    }
+    @Test
     void checkH2(){
         try(SessionFactory sessionFactory = HibernateTestUtil.buildSessionFactory();
             Session session = sessionFactory.openSession()){
@@ -36,25 +57,14 @@ class HibernateRunnerTest {
                     .build();
 
             session.save(google);
-            Programmer programmer= Programmer.builder()
-                    .username("ivan@gmail.com")
-                    .language(Language.JAVA)
-                    .company(google)
-                    .build();
-            session.save(programmer);
 
-            Manager manager=Manager.builder()
-                    .username("sveta@gmal.com")
-                    .projectName("Starter")
-                    .company(google)
-                    .build();
-            session.save(manager);
+
+
             session.flush();
 
             session.clear();
 
-            Programmer programmer1 = session.get(Programmer.class, 1L);
-            Manager manager1 = session.get(Manager.class, 1L);
+
             System.out.println();
             session.getTransaction().commit();
 
