@@ -9,7 +9,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@EqualsAndHashCode(of={"user","chat","createdAt","createdBy"})
+@EqualsAndHashCode(of={"user","chat","createdAt","createdBy"}, callSuper = false)
 @Entity
 @Table(name = "users_chat")
 public class UserChat extends AuditableEntity<Long>  {
